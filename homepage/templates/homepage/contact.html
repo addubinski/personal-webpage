@@ -1,0 +1,63 @@
+<h1 id="contact" class="center section-header">[ Contact ]</h1>
+<section>
+    <div style="margin-bottom: 65px;" class="section-wrapper">
+        {% if recaptcha_message %}<h3 class="center" style="color: #b3e5fc;">{{ recaptcha_message }}</h3>{% endif %}
+        <form class="ui form" action="{% url 'homepage' %}#contact" method="POST">
+            {% csrf_token %}
+            <div class="ui stackable sixteen column grid">
+                <div class="sixteen wide tablet eight wide computer column">
+                    <div class="field">
+                        <label class="form-label ui label grey" for="name">Name</label>
+                        <input type="text" name="name" id="name" value="{% if form %}{{ form.name.value }}{% endif %}"
+                               placeholder="Tesla Ampere">
+                        {% if form.name.errors %}}
+                            <div class="ui pointing red basic label">{{ form.name.errors.0 }}</div>{% endif %}
+                    </div>
+                </div>
+                <div class="sixteen wide tablet eight wide computer column">
+                    <div class="field">
+                        <label class="form-label ui label grey" for="email">E-mail</label>
+                        <input type="text" name="email" id="email"
+                               value="{% if form %}{{ form.email.value }}{% endif %}"
+                               placeholder="tesla.ampere@gmail.com">
+                        {% if form.email.errors %}
+                            <div class="ui pointing red basic label">{{ form.email.errors.0 }}</div>{% endif %}
+                    </div>
+                </div>
+                <div class="sixteen wide tablet sixteen wide computer column">
+                    <div class="field">
+                        <label class="form-label ui label grey" for="message">Message</label>
+                        <textarea name="message" id="message" placeholder="Enter your message here...">{% if form %}
+                            {{ form.message.value }}{% endif %}</textarea>
+                        {% if form.message.errors %}
+                            <div class="ui pointing red basic label">{{ form.message.errors.0 }}</div>{% endif %}
+                    </div>
+                </div>
+                <div class="no-padding center" style="width: 100%;">
+                    <div style="display: inline-block;" data-callback="onCaptchaSuccess"
+                         data-expired-callback="onCaptchaFail"
+                         data-error-callback="onCaptchaFail"
+                         class="g-recaptcha"
+                         data-sitekey="6LcKCXEUAAAAAEgyCpgMFon6NnAuZN7LoxuDfSLw"></div>
+                </div>
+                <div class="sixteen wide tablet sixteen wide computer column center">
+                    <button disabled="disabled" id="submit"
+                            style="width: 260px; height: 75px; margin-bottom: 10px; display: inline-block;"
+                            type="submit"
+                            class="ui button blue">Send
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function onCaptchaSuccess(token) {
+            if (token)
+                document.getElementById('submit').disabled = false;
+        }
+
+        function onCaptchaFail() {
+            document.getElementById('submit').disabled = true;
+        }
+    </script>
+</section>

@@ -1,0 +1,78 @@
+<h1 id="skill" class="center section-header">[ Skills ]</h1>
+<section>
+    <div class="section-wrapper">
+        <div class="ui stackable sixteen column grid">
+            <div class="sixteen wide tablet eight wide computer column">
+                <h3 class="center" style="text-decoration: underline; text-decoration-color: #64b5f6;">Software
+                    Engineering</h3>
+                <div class="ui stackable sixteen column grid">
+                    <div class="sixteen wide mobile eight wide computer column">
+                        <h4 class="skill-header">Core Programming Languages</h4>
+                        <ul class="skill-list">
+                            {% for core_language in SOFTWARE.core_languages %}
+                                <li><p style="font-size: 0.95rem;" class="ui blue label">{{ core_language.name }}</p></li>
+                            {% endfor %}
+                        </ul>
+                        <h4 class="skill-header">Tools</h4>
+                        <ul class="skill-list">
+                            {% for tool in SOFTWARE.software_tools %}
+                                <li><p style="font-size: 0.95rem;" class="ui blue label">{{ tool.name }}</p></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="sixteen wide mobile eight wide computer column">
+                        <h4 class="skill-header">Frameworks & Libraries</h4>
+                        <ul class="skill-list">
+                            {% for framework in SOFTWARE.frameworks %}
+                                <li><p style="font-size: 0.95rem;" class="ui blue label">{{ framework.name }}</p></li>
+                            {% endfor %}
+                        </ul>
+                        <h4 class="skill-header">Databases</h4>
+                        <ul class="skill-list">
+                            {% for database in SOFTWARE.databases %}
+                                <li><p style="font-size: 0.95rem;" class="ui blue label">{{ database.name }}</p></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sixteen wide tablet eight wide computer column">
+                <h3 class="center" style="text-decoration: underline; text-decoration-color: #64b5f6;">Data Science</h3>
+                <div class="ui stackable sixteen column grid">
+                    <div class="sixteen wide mobile eight wide computer column">
+                        <h4 class="skill-header">Machine Learning</h4>
+                        <ul class="skill-list">
+                            {% for ml_skill in DATA.machine_learning %}
+                                <li><p style="font-size: 0.95rem;" class="ui blue label">{{ ml_skill.name }}</p></li>
+                            {% endfor %}
+                        </ul>
+                        <h4 class="skill-header">Visualization</h4>
+                        <ul class="skill-list">
+                            {% for visualization in DATA.visualization %}
+                                <li><p style="font-size: 0.95rem;" class="ui blue label">{{ visualization.name }}</p></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="sixteen wide mobile eight wide computer column">
+                        <h4 class="skill-header">Libraries, Frameworks & Tools</h4>
+                        <ul class="skill-list">
+                            {% for data_tool in DATA.data_tools %}
+                                <li><p style="font-size: 0.95rem;" class="ui blue label">{{ data_tool.name }}</p></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="sixteen wide column">
+                <h3 class="center" style="text-decoration: underline; text-decoration-color: #64b5f6;">Other</h3>
+                <div class="ui stackable sixteen column grid">
+                    <div class="sixteen wide column center">
+                        {% for other_skill in OTHER %}
+                            <p style="font-size: 0.95rem; margin: 5px 3px" class="ui blue label">{{ other_skill.name }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

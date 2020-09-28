@@ -1,0 +1,14 @@
+<h1 id="recent-projects" class="center section-header">[ Recent Projects ]</h1>
+<span style="position: absolute; top: 3px; right: 0;"><a href="{% url 'projects_home' %}"><button
+        class="ui button blue all-projects">All Projects</button></a></span>
+<section>
+    <div class="ui stackable centered sixteen column grid">
+        {% for project in projects %}
+            <div class="eight wide mobile four wide computer column">
+                <a href="{% url 'projects_home' %}?search={{ project.project.title|urlencode }}">
+                    <img class="project-image" src="{{ project.image.url }}" alt="{{ project.alt }}"/>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</section>

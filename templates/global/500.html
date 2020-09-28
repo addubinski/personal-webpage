@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Internal Errors - Alexander Dubinski</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% include 'global/css_imports.html' %}
+    {% load static %}
+    <link rel="icon" href="{% static 'global/favicon.ico' %}"/>
+</head>
+<body>
+{% include 'global/js_imports.html' %}
+<script src="{% static 'homepage/particles.min.js' %}"></script>
+<div id="particles-js" style="height: 100%"></div>
+<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    <div class="center">
+        <div><img style="max-width: 100%;" src="{% static 'global/500.png' %}" alt="500" /></div>
+        <div style="height: 75px;"></div>
+        <a href="{% url 'homepage' %}"><button class="ui button blue" style="width: 100%; max-width: 325px; height: 90px; font-size: 25px; ">Go to Homepage</button></a>
+    </div>
+</div>
+<script type="text/javascript">
+    particlesJS.load('particles-js', '/static/projects/particles.json', function () {
+        console.log('particles.js config loaded');
+    });
+</script>
+</body>
+</html>

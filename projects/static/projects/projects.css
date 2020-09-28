@@ -1,0 +1,16 @@
+section {
+    max-width: 1280px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 770px) {
+    .mobile-hide {
+        display: none;
+    }
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}

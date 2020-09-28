@@ -1,0 +1,55 @@
+{% extends 'homepage/index.html' %}
+{% block content %}
+    <div id="particle-wrapper">
+        <div id="particles-js"></div>
+        <div id="top-menu">
+            <div class="ui stackable sixteen column grid top-full-height">
+                <div class="sixteen wide tablet six wide computer column center">
+                    <div style="height: 100%;">
+                        <img id="top-img" src="{{ my_picture.url }}" alt="{{ my_picture_alt }}">
+                    </div>
+                </div>
+                <div class="sixteen wide tablet ten wide computer column">
+                    <div id="greeting-holder">
+                        <h1 id="main-greeting"><span>Hi</span>, my name is <span style="color: #4fc3f7;">Alex</span>.
+                        </h1>
+                        <h2 id="greeting-caption">
+                            <span style="color: #03a9f4;">Software Engineer</span>,
+                            <span style="color: #b3e5fc;">Machine Learning Enthusiast</span>, and
+                            <span style="color: #4fc3f7;">Life Long Learner</span>
+                        </h2>
+                    </div>
+                    <div id="button-holder">
+                        <div class="center top-buttons">
+                            <a href="#skill">
+                                <button class="ui button blue">Skills</button>
+                            </a>
+                            <a href="#resume">
+                                <button class="ui button blue">Resume</button>
+                            </a>
+                            <a href="#contact">
+                                <button class="ui button blue">Contact</button>
+                            </a>
+                        </div>
+                        <div class="center top-buttons">
+                            <a href="{% url 'projects_home' %}">
+                                <button id="project-button" class="ui button blue">Projects</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="position: relative; top: 0; left: 0; height: 40px;">
+        <div style="box-shadow: 0 -20px 30px 20px #003c8f; height: 40px; position: absolute; top: 0; left: 0; width: 100%;"></div>
+    </div>
+    <main>
+        <div style="position: relative; max-width: 1280px; margin: auto;">
+            {% include 'homepage/projects.html' %}
+            {% include 'homepage/skills.html' %}
+            {% include 'homepage/resume.html' %}
+            {% include 'homepage/contact.html' %}
+        </div>
+    </main>
+{% endblock content %}

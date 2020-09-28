@@ -1,0 +1,311 @@
+section {
+    max-width: 1280px;
+}
+
+section > div {
+    padding: 1.1rem;
+}
+
+.section-header {
+    color: #fff;
+    font-weight: bold;
+    margin: 40px 0 18px 0;
+}
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    background-color: #1565c0;
+}
+
+#particle-wrapper {
+    height: calc(100% + 35px);
+}
+
+#top-menu {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: rgba(0,0,0,0.65);
+    border-radius: 6px;
+}
+
+#top-img {
+    border-radius: 50%;
+    max-width: 90%;
+    position: relative;
+    top: 25%;
+}
+
+.top-buttons {
+    height: 120px;
+}
+
+.top-buttons button {
+    height: 115px;
+    width: 250px;
+    font-size: 25px !important;
+}
+
+#project-button {
+    width: 770px;
+}
+
+#button-holder {
+    position: relative;
+    top: 60%;
+    width: 100%;
+}
+
+#main-greeting {
+    color: #fff;
+    font-size: 6rem;
+}
+
+#greeting-caption {
+    position: relative;
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+#greeting-holder {
+    position: absolute;
+    top: 10%;
+    padding: 0 10%;
+}
+
+.top-full-height {
+    height: 100%;
+}
+
+@media only screen and (max-width: 1650px) {
+    #top-menu {
+        top: 6%;
+        left: 6%;
+        width: 88%;
+        height: 88%;
+    }
+
+    #main-greeting {
+        font-size: 4rem;
+    }
+
+    #greeting-caption {
+        font-size: 3rem;
+    }
+
+    .top-buttons {
+        height: 75px;
+    }
+
+    .top-buttons button {
+        height: 70px;
+        width: 200px;
+        font-size: 18px !important;
+    }
+
+    #project-button {
+        width: 620px;
+    }
+
+    #button-holder {
+        top: 50%;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    #top-menu {
+        top: 6%;
+        left: 4%;
+        width: 92%;
+        height: 92%;
+    }
+
+    .top-buttons button {
+        width: 170px;
+        font-size: 18px !important;
+    }
+
+    #project-button {
+        width: 525px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .top-full-height {
+        height: 50%;
+    }
+
+    .top-buttons {
+        height: 55px;
+    }
+
+    .top-buttons button {
+        height: 50px;
+        width: 100px;
+        font-size: 16px !important;
+    }
+
+    #greeting-holder {
+        top: 10%;
+        padding: 0 10%;
+    }
+
+    #main-greeting {
+        font-size: 3rem;
+    }
+
+    #greeting-caption {
+        font-size: 2rem;
+    }
+
+    #button-holder {
+        top: 155%;
+    }
+
+    #project-button {
+        width: 315px;
+    }
+
+    #top-img {
+        top: 3%
+    }
+
+    #top-menu {
+        top: 2%;
+        left: 2%;
+        width: 96%;
+        height: 96%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .top-full-height {
+        height: 50%;
+    }
+
+    #greeting-holder {
+        top: 4%;
+        padding: 0 10%;
+    }
+
+    #main-greeting {
+        font-size: 2.4rem;
+    }
+
+    #greeting-caption {
+        top: -18px;
+        font-size: 1.6rem;
+    }
+
+    #button-holder {
+        top: 145%;
+    }
+
+    #project-button {
+        width: 315px;
+    }
+
+    .all-projects {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+
+    .top-full-height {
+        height: 50%;
+    }
+
+    .top-buttons {
+        height: 40px;
+    }
+
+    .top-buttons button {
+        height: 36px;
+        width: 80px;
+        font-size: 12px !important;
+    }
+
+    #greeting-holder {
+        top: 5%;
+        padding: 0 10%;
+    }
+
+    #main-greeting {
+        font-size: 2rem;
+    }
+
+    #greeting-caption {
+        font-size: 1rem;
+    }
+
+    #button-holder {
+        top: 135%;
+    }
+
+    #project-button {
+        width: 255px;
+    }
+}
+
+.section-wrapper {
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+
+.skill-header {
+    color: #bbdefb;
+}
+
+.skill-list, .skill-list > li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.project-image:hover {
+    opacity: 0.8;
+}
+
+.form-label {
+    color: #fff !important;
+}
+
+.h3, .h4 {
+    display: block !important;
+    float: left;
+    clear: left;
+    margin: 0 0 5px 12px !important;
+}
+
+.h3 {
+    font-size: 1.3rem !important;
+}
+
+.h4 {
+    font-size: 1.1rem !important;
+}
+
+.h4-right {
+    display: block !important;
+    float: right;
+    clear: right;
+    font-size: 1.1rem !important;
+    margin: 0 15px 5px 0 !important;
+}
+
+.resume-details {
+    background-color: #1565c0 !important;
+    color: #fff !important;
+    margin-top: -15px !important;
+    margin-bottom: 20px !important;
+}

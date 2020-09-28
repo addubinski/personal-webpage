@@ -1,0 +1,71 @@
+<h1 id="resume" class="center section-header">[ Resume ]</h1>
+<section>
+    <div class="section-wrapper">
+        <h3 class="center" style="text-decoration: underline; text-decoration-color: #64b5f6;">Experience</h3>
+        <div class="ui stackable sixteen column grid">
+            {% for experience in experiences %}
+                <div class="sixteen wide tablet eight wide computer column">
+                    <p class="ui blue label h3">{{ experience.info.title }}</p>
+                    <p class="ui grey label h4">{{ experience.info.name }}</p>
+                </div>
+                <div class="sixteen wide tablet eight wide computer column right">
+                    <p class="ui grey label h4-right">{{ experience.info.from_date|date:"m/Y" }} -
+                        {% if experience.info.to_date %}
+                            {{ experience.info.to_date|date:"m/Y" }}
+                        {% else %}
+                            Current
+                        {% endif %}
+                    </p>
+                </div>
+                <div style="padding: 0 25px;" class="sixteen wide tablet sixteen wide computer column">
+                    {% if experience.details %}
+                        <div class="ui message resume-details">
+                            <ul class="ui bulleted list">
+                                {% for detail in experience.details %}
+                                    <li class="item">{{ detail.info }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <h3 class="center" style="text-decoration: underline; text-decoration-color: #64b5f6; margin-top: 55px;">
+            Education</h3>
+        <div class="ui stackable sixteen column grid">
+            {% for education in educations %}
+                <div class="sixteen wide tablet eight wide computer column">
+                    <p class="ui blue label h3">{{ education.info.major }}</p>
+                    <p class="ui grey label h4">{{ education.info.name }}</p>
+                </div>
+                <div class="sixteen wide tablet eight wide computer column right">
+                    <p class="ui grey label h4-right">{{ education.info.gpa|floatformat:2 }} GPA</p>
+                </div>
+                <div style="padding: 0 25px;" class="sixteen wide tablet sixteen wide computer column">
+                    {% if education.details %}
+                        <div class="ui message resume-details">
+                            <ul class="ui bulleted list">
+                                {% for detail in education.details %}
+                                    <li class="item">{{ detail.info }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <h3 class="center" style="text-decoration: underline; text-decoration-color: #64b5f6;  margin-top: 55px;">Awards
+            & Certifications</h3>
+        <div class="ui stackable sixteen column grid">
+            {% for cert_or_award in certs_and_awards %}
+                <div class="sixteen wide tablet eight wide computer column">
+                    <p class="ui blue label h3">{{ cert_or_award.title }}</p>
+                    <p class="ui grey label h4">{{ cert_or_award.issuer }}</p>
+                </div>
+                <div class="sixteen wide tablet eight wide computer column right">
+                    <p class="ui grey label h4-right">{{ cert_or_award.award_date|date:"m/Y" }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
