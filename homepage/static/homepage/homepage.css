@@ -19,7 +19,7 @@ section > div {
 }
 
 #particle-wrapper {
-    height: calc(100% + 35px);
+    height: calc(100% + 40px);
 }
 
 #top-menu {
@@ -35,8 +35,11 @@ section > div {
 #top-img {
     border-radius: 50%;
     max-width: 90%;
+}
+
+#top-img-container {
     position: relative;
-    top: 25%;
+    top: 17%;
 }
 
 .top-buttons {
@@ -170,8 +173,10 @@ section > div {
         width: 315px;
     }
 
-    #top-img {
-        top: 3%
+    #top-img-container {
+        margin: auto;
+        top: 4%;
+        max-width: 80%;
     }
 
     #top-menu {
@@ -203,7 +208,7 @@ section > div {
     }
 
     #button-holder {
-        top: 145%;
+        top: 158%;
     }
 
     #project-button {
@@ -245,7 +250,7 @@ section > div {
     }
 
     #button-holder {
-        top: 135%;
+        top: 140%;
     }
 
     #project-button {
@@ -308,4 +313,12 @@ section > div {
     color: #fff !important;
     margin-top: -15px !important;
     margin-bottom: 20px !important;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons > a {
+    margin: 0 12px;
 }

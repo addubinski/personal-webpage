@@ -5,8 +5,16 @@
         <div id="top-menu">
             <div class="ui stackable sixteen column grid top-full-height">
                 <div class="sixteen wide tablet six wide computer column center">
-                    <div style="height: 100%;">
-                        <img id="top-img" src="{{ my_picture.url }}" alt="{{ my_picture_alt }}">
+                    <div  style="height: 100%;">
+                        <div id="top-img-container">
+                            <img id="top-img" src="{{ my_picture.url }}" alt="{{ my_picture_alt }}">
+                            <div class="center social-icons">
+                                <a target="_blank" href="https://www.kaggle.com/addubinski"><i class="fab fa-kaggle fa-2x"></i></a>
+                                <a target="_blank" href="https://github.com/addubinski"><i class="fab fa-github fa-2x"></i></a>
+                                <a target="_blank" href="https://www.linkedin.com/in/addubinski/"><i
+                                        class="fab fa-linkedin-in fa-2x"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="sixteen wide tablet ten wide computer column">
