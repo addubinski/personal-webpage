@@ -9,7 +9,7 @@
                         <label for="search"></label>
                         <input class="prompt" name="search" id="search" type="text" value="{{ search }}"
                                placeholder="Search projects...">
-                        <i class="search icon"></i>
+                        <button class="submit-icon" type="submit"><i class="fas fa-search"></i></button>
                     </div>
                 </form>
             </div>
@@ -50,7 +50,7 @@
                                 <div style="position: relative;" class="extra content">
                             <span class="right floated">Started: <span
                                     style="font-weight: bold;">{{ project.started|date:"Y" }}</span></span>
-                                    <span><i class="eye icon"></i>{{ project.views }} Views</span>
+                                    <span><i style="margin-right: 5px;" class="fas fa-eye"></i> {{ project.views }} Views</span>
                                     <span class="center" style="width: 100%; position: absolute; left: 0; top: 10px;">
                                 {% if project.meta.technologies or project.repo %}<span
                                         data-title="Technologies used:"
@@ -58,7 +58,7 @@
                                         data-position="bottom center"
                                         {% if project.meta.technologies %}class="popup"{% endif %}>
                                     <a {% if project.repo %}href="{{ project.repo }}"{% endif %}>
-                                        <i style="margin: 0;" class="code icon"></i>
+                                        <i class="fas fa-code"></i>
                                     </a>
                                 </span>
                                 {% endif %}
@@ -68,7 +68,7 @@
                                                   data-content="{{ project.meta.info }}"
                                                   data-variation="wide"
                                                   data-position="bottom center" class="popup">
-                                        <i style="margin: 0;" class="info icon"></i>
+                                        <i class="fas fa-info"></i>
                                     </span>
                                         {% endif %}
                             </span>
