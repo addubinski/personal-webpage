@@ -27,8 +27,8 @@
                 <div class="sixteen wide tablet sixteen wide computer column">
                     <div class="field">
                         <label class="form-label ui label grey" for="message">Message</label>
-                        <textarea name="message" id="message" placeholder="Enter your message here...">{% if form %}
-                            {{ form.message.value }}{% endif %}</textarea>
+                        <textarea name="message" id="message"
+                                placeholder="Enter your message here...">{% if form %}{{ form.message.value }}{% endif %}</textarea>
                         {% if form.message.errors %}
                             <div class="ui pointing red basic label">{{ form.message.errors.0 }}</div>{% endif %}
                     </div>
