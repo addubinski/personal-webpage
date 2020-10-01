@@ -10,7 +10,7 @@
                         <label class="form-label ui label grey" for="name">Name</label>
                         <input type="text" name="name" id="name" value="{% if form %}{{ form.name.value }}{% endif %}"
                                placeholder="Tesla Ampere">
-                        {% if form.name.errors %}}
+                        {% if form.name.errors %}
                             <div class="ui pointing red basic label">{{ form.name.errors.0 }}</div>{% endif %}
                     </div>
                 </div>
